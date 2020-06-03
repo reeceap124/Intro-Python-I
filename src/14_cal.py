@@ -33,11 +33,11 @@ from datetime import datetime
 
 def my_cal (month = datetime.now().month, year = datetime.now().year):
   print(sys.argv)
-  if len(sys.argv) < 3 and len(sys.argv) > 1:
+  if len(sys.argv) == 2:
     print(calendar.month(year, int(sys.argv[1])))
   elif len(sys.argv) > 3:
     print("Error: Too many inputs, only need month and year")
   else:
-    print(calendar.month(year, month))
+    print(calendar.month(int(sys.argv[2]), int(sys.argv[1])))
 
 my_cal()
